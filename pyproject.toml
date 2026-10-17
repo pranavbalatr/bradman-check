@@ -1,0 +1,44 @@
+[project]
+name = "bradman"
+version = "0.1.0"
+description = "Test batters measured against Bradman: era baselines, survival analysis, counterfactual models"
+readme = "README.md"
+authors = [
+    { name = "Pranav Bala", email = "pranavbalatr@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=6.3.0",
+    "httpx>=0.28.1",
+    "lifelines>=0.30.3",
+    "numpy>=2.5.4",
+    "polars>=2.0.0",
+    "pyarrow>=26.0.0",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+    "statsmodels>=0.15.0",
+    "streamlit>=1.66.0",
+    "torch>=2.14.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.33,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
