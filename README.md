@@ -96,5 +96,5 @@ widen the pool.
 - **The win model sees only the batting side's innings**, not the opponent's scores or the
   match state, so its AUC is modest (0.67).
 - **Opposition strength is a decade-level category**, not a bowling-attack rating.
-- **Data comes from Statsguru**, scraped politely with caching for personal research. Check
-  ESPNcricinfo's terms before redistributing `data/`.
+- **Data comes from Statsguru**, scraped politely with caching for personal research. It is
+  not included in this repo; run `fetch` then `train`. Until then, the data and model tests skip.
